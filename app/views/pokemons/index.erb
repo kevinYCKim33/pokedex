@@ -1,0 +1,30 @@
+<h1>Pokemons</h1>
+
+<% if flash[:notice] %>
+  <div class="notice"><%= flash[:notice] %></div>
+<% end %>
+
+<%= form_tag pokemons_upload_path do %>
+  <%= submit_tag "Import Pokemons" %>
+<% end %>
+
+<%= form_tag pokemons_destroy_all_path do %>
+  <%= submit_tag "Delete Pokemons" %>
+<% end %>
+
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Pokemon</th>
+    <th>Height</th>
+    <th>Weight</th>
+  </tr>
+  <% @pokemons.each do |pokemon| %>
+    <tr>
+      <td><%=pokemon.pokedex_id%></td>
+      <td><%=pokemon.name%></td>
+      <td><%=pokemon.height%></td>
+      <td><%=pokemon.weight%></td>
+    </tr>
+  <%end%>
+</table>
