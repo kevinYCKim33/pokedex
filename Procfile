@@ -1,1 +1,1 @@
-pokemonworker: bundle exec sidekiq -c 3
+pokemonworker: bundle exec sidekiq -c 5
