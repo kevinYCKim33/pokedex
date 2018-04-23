@@ -6,7 +6,8 @@ git_source(:github) do |repo_name|
 end
 
 gem 'sidekiq'
-
+#for sidekiq ui
+gem 'sinatra', github: 'sinatra/sinatra' #some dependency issue with rails5
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.1.5'

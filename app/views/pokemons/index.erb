@@ -4,6 +4,8 @@
   <div class="notice"><%= flash[:notice] %></div>
 <% end %>
 
+<%#= link_to "See sidekiq stats", sidekiq_web_path %>
+
 <%= form_tag pokemons_upload_path do %>
   <%= submit_tag "Import Pokemons" %>
 <% end %>
